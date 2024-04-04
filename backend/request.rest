@@ -1,0 +1,52 @@
+//create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "panpann",
+    "email": "pan@gmail.com",
+    "password": "12345",
+    "confPassword": "12345",
+    "role": "user"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single User
+GET http://localhost:5000/users/988c2d5c-04df-4159-a9bc-40bedb376711
+
+###
+// Update data User
+PUT http://localhost:5000/users/988c2d5c-04df-4159-a9bc-40bedb376711
+Content-Type: application/json
+
+{
+    "name": "Asfina updated",
+    "email": "asfina@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+###
+// Delete data User
+DELETE  http://localhost:5000/users/c3a61204-d04b-4ead-8542-736a65713ec9
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "pan@gmail.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout 
