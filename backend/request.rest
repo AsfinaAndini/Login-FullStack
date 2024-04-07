@@ -50,3 +50,35 @@ GET http://localhost:5000/me
 
 ###
 DELETE http://localhost:5000/logout 
+
+###
+// get All Products
+GET http://localhost:5000/products
+
+###
+// get one Products
+GET http://localhost:5000/products/c2028ad6-efb7-4d66-861c-ba112b05a160
+
+###
+// add data pruduct
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 5",
+    "price": 25000
+}
+
+###
+//update data product
+PUT http://localhost:5000/products/05f26479-cda3-4e6a-87dc-2a521e4eb742
+Content-Type: application/json
+
+{
+    "name": "Product 1 updated",
+    "price": 19000
+}
+
+###
+//delete Product
+DELETE http://localhost:5000/products/05f26479-cda3-4e6a-87dc-2a521e4eb742
