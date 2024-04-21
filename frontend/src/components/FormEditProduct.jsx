@@ -8,7 +8,7 @@ const FormEditProduct = () => {
     const [price, setPrice] = useState("");
     const [msg, setMsg] = useState("");
     const navigate = useNavigate();
-    const {id} = useParams();
+    const { id } = useParams();
 
     useEffect(()=>{
         const getProductById = async () =>{
@@ -63,7 +63,7 @@ const FormEditProduct = () => {
                     </div>
                     <div className="field">
                         <div className="control">
-                        <button type="submit"className="button is-success">Save</button> 
+                        <button type="submit" className="button is-success">Update</button> 
                         </div>
                     </div>
                 </form>
