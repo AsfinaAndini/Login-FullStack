@@ -9,7 +9,7 @@ const initialState = {
     message: ""
 }
 
-export const LoginUser = createAsyncThunk("User/Loginuser", async(user, thunkAPI) => {
+export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI) => {
     try {
         const response = await Axios.post('http://localhost:5000/login',{
            email : user.email,
@@ -24,7 +24,7 @@ export const LoginUser = createAsyncThunk("User/Loginuser", async(user, thunkAPI
     }
 });
 
-export const getMe = createAsyncThunk("User/getMe", async(_, thunkAPI) => {
+export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
         const response = await Axios.get('http://localhost:5000/me');
         return response.data;
@@ -36,7 +36,7 @@ export const getMe = createAsyncThunk("User/getMe", async(_, thunkAPI) => {
     }
 });
 
-export const LogOut = createAsyncThunk("User/LogOut", async() => {
+export const LogOut = createAsyncThunk("user/LogOut", async() => {
     await Axios.delete('http://localhost:5000/logout');
     });
 
