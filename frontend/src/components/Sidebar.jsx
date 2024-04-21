@@ -23,10 +23,14 @@ const Sidebar = () => {
     <li><NavLink to = {"/dashboard"}><IoHome/>Dashboard</NavLink></li>
     <li><NavLink to = {"/products"}><IoPricetag/>Product</NavLink></li>
   </ul>
-  <p className="menu-label">Admin</p>
+  {user && user.role === "admin" && (
+    <div>
+      <p className="menu-label">Admin</p>
   <ul className="menu-list">
     <li><NavLink to = {"/users"}><IoPerson/>Users</NavLink></li>
     </ul>
+    </div>
+  )}
   <p className="menu-label">Settings</p>
   <ul className="menu-list">
     <li><button onClick={logout} className="button is-white"><IoLogOut/>Logout</button></li>
